@@ -1,0 +1,9 @@
+[mongo]
+host = de.com
+db = isdev
+
+[db_app]
+host = dcom
+pass = MchXdRBrJw75V4pXm5gp7Cp3e
+db = isev
+user = developer

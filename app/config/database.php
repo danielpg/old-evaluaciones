@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * Database configuration class.
+ * You can specify multiple configurations for production, development and testing.
+ *
+ * driver => The name of a supported driver; valid options are as follows:
+ *		mysql 		- MySQL 4 & 5,
+ *		mysqli 		- MySQL 4 & 5 Improved Interface (PHP5 only),
+ *		sqlite		- SQLite (PHP5 only),
+ *		postgres	- PostgreSQL 7 and higher,
+ *		mssql		- Microsoft SQL Server 2000 and higher,
+ *		db2			- IBM DB2, Cloudscape, and Apache Derby (http://php.net/ibm-db2)
+ *		oracle		- Oracle 8 and higher
+ *		firebird	- Firebird/Interbase
+ *		sybase		- Sybase ASE
+ *		adodb-[drivername]	- ADOdb interface wrapper (see below),
+ *		odbc		- ODBC DBO driver
+ *
+ * Yo-*u can add custom database drivers (or override existing drivers) by adding the
+ * appropriate file to app/models/datasources/dbo.  Drivers should be named 'dbo_x.php',
+ * where 'x' is the name of the database.
+ *
+ * persistent => true / false
+ * Determines whether or not the database should use a persistent connection
+ *
+ * connect =>
+ * ADOdb set the connect to one of these
+ *	(http://phplens.com/adodb/supported.databases.html) and
+ *	append it '|p' for persistent connection. (mssql|p for example, or just mssql for not persistent)
+ * For all other databases, this setting is deprecated.
+ *
+ * host => ccccccccccccc This setting can be overridden
+ * on a per-table basis with the Model::$tablePrefix property.
+ *
+ * schema =>
+ * For Postgres and DB2, specifies which schema you would like to use the tables in. Postgres defaults to
+ * 'public', DB2 defaults to empty.
+ *
+ * encoding =>
+ * For MySQL, MySQLi, Postgres and DB2, specifies the character encoding to use when connecting to the
+ * database.  Uses database default.
+ *
+ */
+/*
+ * 
+ */
+
+	class DATABASE_CONFIG {
+		var $default = array(
+			'driver' => 'mysqli',
+			'persistent' => false,
+			'host' => 'localhost',
+			'login' => 'root',
+			'password' => '1234',
+			'database' => 'dwork',
+			'encoding' => 'utf8'
+		);
+	}
+/*
+	class DATABASE_CONFIG {
+		var $default = array(
+			'driver' => 'mysqli',
+			'persistent' => false,
+			'host' => 'localhost',
+			'login' => 'reactiva_evauser',
+			'password' => 'neurobase2099',
+			'database' => 'reactiva_evalua',
+			'encoding' => 'utf8'
+		);
+	}*/
+
+?>
